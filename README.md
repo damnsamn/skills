@@ -23,3 +23,13 @@ Turn working changes into logical, reviewable commits:
 The agent inspects the diffs, proposes commit groups, stages precise files or hunks, and reviews each staged diff. By default, only changes made during the current session are in scope; explicitly name a broader scope when needed.
 
 [Read the skill](skills/commit-for-me/SKILL.md)
+
+## `create-pr`
+
+Create a PR for one feature while other work remains in the same checkout:
+
+> Create a PR for the project pins work.
+
+The agent syncs `main`, branches, uses `commit-for-me` to commit only the requested work, pushes and opens the PR, then returns to `main` with unrelated changes intact. If a worktree was used, it cleans it up after preserving any remaining work.
+
+[Read the skill](skills/create-pr/SKILL.md)
