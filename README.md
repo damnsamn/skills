@@ -30,6 +30,6 @@ Create a PR for one feature while other work remains in the same checkout:
 
 > Create a PR for the project pins work.
 
-The agent syncs `main`, branches, uses `commit-for-me` to commit only the requested work, pushes and opens the PR, then returns to `main` with unrelated changes intact. If a worktree was used, it cleans it up after preserving any remaining work.
+The agent syncs `main`, branches, uses `commit-for-me` to commit only the requested work, pushes and opens the PR, then returns to `main` with unrelated changes intact. Transferring work into a worktree moves it: after verifying the transfer, the agent removes those changes from the original checkout before continuing, preserving unrelated work. It removes the temporary worktree after publishing the PR and preserving any remaining work.
 
 [Read the skill](skills/create-pr/SKILL.md)
